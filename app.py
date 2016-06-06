@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 import requests
 import pandas as pd
-from io import StringIO
+#from io import StringIO
 from bokeh.plotting import figure
 from bokeh.embed import components
 
@@ -24,7 +24,8 @@ def index():
         response = requests.get('https://www.quandl.com/api/v3/datasets/'+database_name+'/'+stock_ticker
             +'.csv?api_key='+api_key+'&rows='+num_days+'&column_index=0&column_index=4')
 
-        stocks = pd.read_csv(StringIO(response.text), parse_dates=[0])
+        #stocks = pd.read_csv(StringIO(response.text), parse_dates=[0])
+        stocks = pd.read_csv(parse_date[0])
 
         # Build bokeh plot and grab script and div components
         p = figure(x_axis_type="datetime")
