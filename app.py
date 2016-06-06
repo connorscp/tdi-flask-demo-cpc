@@ -40,4 +40,5 @@ def index():
 if __name__ == '__main__':
     #app.run(debug=True) # when running locally. Start w/ 127.0.0.1:5000/index
     #app.run(host='0.0.0.0') # when running on DO. Start w/ vagrant:5000/index
-    app.run(port=33507) # when on Heroku. Start w/ 
+    #app.run(port=33507) # when on Heroku. Start w/ 
+    app.run(debug=True)
