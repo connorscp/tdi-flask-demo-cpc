@@ -7,8 +7,12 @@ from bokeh.embed import components
 
 app = Flask(__name__)
 
-@app.route('/index',methods=['GET','POST'])
+@app.route('/',methods=['GET'])
 def index():
+    return redirect('/index')
+
+@app.route('/index',methods=['GET','POST'])
+def home():
     if request.method =='GET':
         return render_template('userinfo.html')
     else:
