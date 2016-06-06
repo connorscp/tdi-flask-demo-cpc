@@ -1,0 +1,23 @@
+<!doctype html>
+<title>Stock Ticker</title>
+<link rel=stylesheet type=text/css href='{{ url_for('static',filename='style.css')}}'>
+<div class=page>
+  <h1>User Input</h1>
+  <div class=metanav>
+
+    <h4>
+      Please enter a stock ticker, eg. GOOG, and click submit. You will see the stock's closing prices for the past month.
+    </h4>
+
+    <form id='input' method='post' action='index' >
+      <p>
+    Ticker Symbol: <input type='text' name='stock_ticker' />
+      </p>
+      <p>
+    <input type='submit' value='Submit' />
+      </p>
+    </form>
+
+  </div>
+</div>
+</html>
